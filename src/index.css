@@ -1,0 +1,35 @@
+@import "tailwindcss";
+:root{
+    --bg: #ffffff;
+    --bg-secondary: #F0F0F0;
+    --text-gray: #818181;
+}
+
+@font-face {
+    font-family: 'PrimaryFont';
+    src: url('./assets/fonts/integralcf.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SecondaryFont';
+    src: url('./assets/fonts/Satoshi.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'VersaceFont';
+    src: url('./assets/fonts/versace.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ZaraFont';
+    src: url('./assets/fonts/zara.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GucciFont';
+    src: url('./assets/fonts/gucci.otf') format('opentype');
+}
+@font-face {
+    font-family: 'PradaFont';
+    src: url('./assets/fonts/prada.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CKFont';
+    src: url('./assets/fonts/calvinklein.ttf') format('truetype');
+}
