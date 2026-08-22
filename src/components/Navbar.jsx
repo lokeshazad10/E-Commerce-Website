@@ -1,12 +1,15 @@
 import React from "react";
 import { ShoppingCart, CircleUserRound, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="flex justify-center items-center gap-10 m-6 h-12">
-      <h1 className="font-[PrimaryFont] text-2xl font-bold">SHOP.CO</h1>
+      <Link to="/">
+        <h1 className="font-[PrimaryFont] text-2xl font-bold">SHOP.CO</h1>
+      </Link>
       <ul className="flex gap-6 px-5">
-        <li>Shop</li>
+        <Link to="/shop">Shop </Link>
         <li>On Sale</li>
         <li>New Arrivals</li>
         <li>Brands</li>

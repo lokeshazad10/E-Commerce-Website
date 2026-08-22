@@ -11,7 +11,10 @@ import {
   NewArrivalProductsData,
   TopSellingProductsData,
 } from "../Data/ProductsData";
+import customerReviews from "../Data/ReviewsData";
 import Footer from "../components/Footer";
+import StyleCard from "../components/common/StyleCard";
+import Slider from "../components/common/ReviewSlider";
 
 const Home = () => (
   <div className="overflow-hidden">
@@ -79,10 +82,41 @@ const Home = () => (
     </section>
 
     {/* category section */}
-    <section></section>
+    <section className="px-40 py-20">
+      <div className="bg-(--bg-secondary) flex flex-col justify-center items-center rounded-3xl">
+        <Header title="browse by dress style" />
+        <div className="w-full pb-10 px-10 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-7">
+          <StyleCard
+            title="Casual"
+            imageUrl="/browse_style/casual.png"
+            spanClass="md:col-span-5"
+          />
+          <StyleCard
+            title="Formal"
+            imageUrl="/browse_style/formal.png"
+            spanClass="md:col-span-7"
+          />
+          <StyleCard
+            title="Party"
+            imageUrl="/browse_style/party.png"
+            spanClass="md:col-span-7"
+          />
+          <StyleCard
+            title="Gym"
+            imageUrl="/browse_style/gym.png"
+            spanClass="md:col-span-5"
+          />
+        </div>
+      </div>
+    </section>
 
-    {/* footer  */}
-    <Footer />
+    {/* review section  */}
+    <section className="px-20 pb-20">
+      <Header title="our happy customers" width="fit-content" text="text-3xl" />
+      <div className="py-20">
+        <Slider />
+      </div>
+    </section>
   </div>
 );
 

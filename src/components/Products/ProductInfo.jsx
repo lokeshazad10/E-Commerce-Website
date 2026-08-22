@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 
 const ProductInfo = ({ title, price, originalPrice, discount, rating }) => {
   return (
@@ -6,19 +7,7 @@ const ProductInfo = ({ title, price, originalPrice, discount, rating }) => {
       <h1 className="font-bold text-lg whitespace-nowrap">{title}</h1>
       {/* Rating System */}
       <div className="flex items-center gap-1">
-        <div className="flex">
-          {Array.from({ length: 5 }).map((_, i) => {
-            const filled = i < Math.round(rating); // 0-based index
-            return (
-              <span
-                key={i}
-                className={filled ? "text-yellow-400" : "text-gray-300"}
-              >
-                ★
-              </span>
-            );
-          })}
-        </div>
+        <Rating rating={rating} />
         <span className="text-(--text-gray) text-sm">{rating}/5</span>
       </div>
       <div className="flex items-center gap-2">
