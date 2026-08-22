@@ -4,7 +4,7 @@ import FooterInfo from "./common/FooterInfo";
 
 const Footer = () => {
   return (
-    <footer className="w-screen relative bg-(--bg-secondary) mt-30 flex justify-center items-center flex-col">
+    <footer className="relative bg-(--bg-secondary) mt-30 flex justify-center items-center flex-col">
       <div className="w-[80%] absolute -top-25">
         <NewsLetter />
       </div>

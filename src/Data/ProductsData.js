@@ -6,7 +6,7 @@ export const NewArrivalProductsData = [
     originalPrice: null,
     discount: null,
     rating: 4.5,
-    image: "/public/ProductImages/new_arrival_01.png",
+    image: "/ProductImages/new_arrival_01.png",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const NewArrivalProductsData = [
     originalPrice: 1500,
     discount: 40,
     rating: 4,
-    image: "/public/ProductImages/new_arrival_02.png",
+    image: "/ProductImages/new_arrival_02.png",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const NewArrivalProductsData = [
     originalPrice: null,
     discount: null,
     rating: 4.5,
-    image: "/public/ProductImages/new_arrival_03.png",
+    image: "/ProductImages/new_arrival_03.png",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const NewArrivalProductsData = [
     originalPrice: 1000,
     discount: 15,
     rating: 4,
-    image: "/public/ProductImages/new_arrival_04.png",
+    image: "/ProductImages/new_arrival_04.png",
   },
 ];
 
@@ -45,7 +45,7 @@ export const TopSellingProductsData = [
     originalPrice: 1500,
     discount: 20,
     rating: 5,
-    image: "/public/ProductImages/top_selling_01.png",
+    image: "/ProductImages/top_selling_01.png",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ export const TopSellingProductsData = [
     originalPrice: null,
     discount: null,
     rating: 4,
-    image: "/public/ProductImages/top_selling_02.png",
+    image: "/ProductImages/top_selling_02.png",
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ export const TopSellingProductsData = [
     originalPrice: 640,
     discount: 30,
     rating: 3.5,
-    image: "/public/ProductImages/top_selling_03.png",
+    image: "/ProductImages/top_selling_03.png",
   },
   {
     id: 4,
@@ -72,6 +72,6 @@ export const TopSellingProductsData = [
     originalPrice: 1050,
     discount: 15,
     rating: 4.5,
-    image: "/public/ProductImages/top_selling_04.png",
+    image: "/ProductImages/top_selling_04.png",
   },
 ];

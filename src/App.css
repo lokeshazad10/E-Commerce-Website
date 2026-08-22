@@ -9,3 +9,13 @@ html, body {
    font-family: "SecondaryFont", sans-serif;
    background: var(--bg);
 }
+.slider{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5;
+}
+.slide{
+   width: 320px;
+}

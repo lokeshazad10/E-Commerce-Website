@@ -1,9 +1,9 @@
 import React from "react";
 
-const Header = (props) => {
+const Header = ({ title, width = "w-screen", text = "text-4xl" }) => {
   return (
-    <div className="w-screen text-center my-10">
-      <h1 className="font-[PrimaryFont] text-4xl font-bold">{props.title}</h1>
+    <div className={`${width} text-center my-10`}>
+      <h1 className={`font-[PrimaryFont] ${text} font-bold`}>{title}</h1>
     </div>
   );
 };
