@@ -18,7 +18,7 @@ import Slider from "../components/common/ReviewSlider";
 
 const Home = () => (
   <div className="overflow-hidden">
-    <section className="w-full h-screen px-6 bg-(--bg-secondary) flex">
+    <section className="w-full px-6 bg-(--bg-secondary) flex">
       <div className="w-1/2 pl-10 pt-20">
         <div className="font-[PrimaryFont] font-bold text-[64px] leading-15">
           find clothes
