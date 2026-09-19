@@ -1,43 +1,44 @@
-export const NewArrivalProductsData = [
+export const ProductsData = [
   {
-    id: 1,
+    id: 5,
     title: "T-shirt with Tape Details",
     price: 520,
     originalPrice: null,
     discount: null,
     rating: 4.5,
     image: "/ProductImages/new_arrival_01.png",
+    tag: "New",
   },
   {
-    id: 2,
+    id: 6,
     title: "Skinny Fit Jeans",
     price: 900,
     originalPrice: 1500,
     discount: 40,
     rating: 4,
     image: "/ProductImages/new_arrival_02.png",
+    tag: "New",
   },
   {
-    id: 3,
+    id: 7,
     title: "Checkered Shirt",
     price: 670,
     originalPrice: null,
     discount: null,
     rating: 4.5,
     image: "/ProductImages/new_arrival_03.png",
+    tag: "New",
   },
   {
-    id: 4,
+    id: 8,
     title: "Sleeve Stripped T-shirt",
     price: 850,
     originalPrice: 1000,
     discount: 15,
     rating: 4,
     image: "/ProductImages/new_arrival_04.png",
+    tag: "New",
   },
-];
-
-export const TopSellingProductsData = [
   {
     id: 1,
     title: "Vertical Striped Shirt",
@@ -46,6 +47,7 @@ export const TopSellingProductsData = [
     discount: 20,
     rating: 5,
     image: "/ProductImages/top_selling_01.png",
+    tag: "Top Selling",
   },
   {
     id: 2,
@@ -55,6 +57,7 @@ export const TopSellingProductsData = [
     discount: null,
     rating: 4,
     image: "/ProductImages/top_selling_02.png",
+    tag: "Top Selling",
   },
   {
     id: 3,
@@ -64,6 +67,7 @@ export const TopSellingProductsData = [
     discount: 30,
     rating: 3.5,
     image: "/ProductImages/top_selling_03.png",
+    tag: "Top Selling",
   },
   {
     id: 4,
@@ -73,5 +77,7 @@ export const TopSellingProductsData = [
     discount: 15,
     rating: 4.5,
     image: "/ProductImages/top_selling_04.png",
-  },
+    tag: "Top Selling",
+  }
 ];
+
