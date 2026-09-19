@@ -9,10 +9,10 @@ const Navbar = () => {
         <h1 className="font-[PrimaryFont] text-2xl font-bold">SHOP.CO</h1>
       </Link>
       <ul className="flex gap-6 px-5">
-        <Link to="/shop">Shop </Link>
-        <li>On Sale</li>
+        <Link to="/store">Store</Link>
+        <Link to="/sale">On Sale</Link>
         <li>New Arrivals</li>
-        <li>Brands</li>
+        <Link to="/brands">Brands</Link>
       </ul>
       <div className="w-xl h-10 flex justify-center items-center bg-(--bg-secondary) px-2 rounded-full gap-2 focus-within:ring-2 focus-within:ring-(--primary) focus-within:ring-offset-2">
         <Search color="#9c9c9c" />
@@ -23,8 +23,12 @@ const Navbar = () => {
         />
       </div>
       <div className="flex justify-center items-center gap-6">
-        <ShoppingCart />
-        <CircleUserRound />
+        <Link to="/cart">
+          <ShoppingCart className="cursor-pointer" />
+        </Link>
+        <Link to="/account">
+          <CircleUserRound className="cursor-pointer" />
+        </Link>
       </div>
     </nav>
   );

@@ -4,7 +4,7 @@ import Rating from "./Rating";
 const ProductInfo = ({ title, price, originalPrice, discount, rating }) => {
   return (
     <div className="text-left px-2 w-[18vw]">
-      <h1 className="font-bold text-lg whitespace-nowrap">{title}</h1>
+      {title && <h1 className="font-bold text-lg whitespace-nowrap">{title}</h1>}
       {/* Rating System */}
       <div className="flex items-center gap-1">
         <Rating rating={rating} />

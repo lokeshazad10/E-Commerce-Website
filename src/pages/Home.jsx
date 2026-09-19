@@ -7,14 +7,12 @@ import Sparkle from "../components/common/Sparkle";
 import { motion } from "motion/react";
 import Header from "../components/Header";
 import Product from "../components/Products/Product";
-import {
-  NewArrivalProductsData,
-  TopSellingProductsData,
-} from "../Data/ProductsData";
+import {ProductsData} from "../Data/ProductsData";
 import customerReviews from "../Data/ReviewsData";
 import Footer from "../components/Footer";
 import StyleCard from "../components/common/StyleCard";
 import Slider from "../components/common/ReviewSlider";
+import { Link } from "react-router-dom";
 
 const Home = () => (
   <div className="overflow-hidden">
@@ -34,7 +32,9 @@ const Home = () => (
           designed to bring out your individuality and cater to your sense of
           style.
         </p>
-        <Button title="Shop Now" />
+        <Link to="/store">
+          <Button title="Shop Now" />
+        </Link>
         <div className="grid grid-cols-3 gap-5">
           <Quality title="200+" description="International Brands" />
           <Quality title="2,000+" description="High Quality Products" />
@@ -58,8 +58,8 @@ const Home = () => (
       <Header title="New Arrivals" />
       {/* product grid */}
       <div className="w-full grid grid-cols-4 py-15 px-20">
-        {NewArrivalProductsData.map((item) => {
-          return <Product key={item.id} product_info={item} />;
+        {ProductsData.map((item) => {
+          return item.tag === "New" ? <Product key={item.id} product_info={item} /> : null;
         })}
       </div>
       <div className="w-full text-center">
@@ -72,17 +72,19 @@ const Home = () => (
       <Header title="top selling" />
       {/* product grid */}
       <div className="w-full grid grid-cols-4 py-15 px-20">
-        {TopSellingProductsData.map((item) => {
-          return <Product key={item.id} product_info={item} />;
+        {ProductsData.map((item) => {
+          return item.tag === "Top Selling" ? <Product key={item.id} product_info={item} /> : null;
         })}
       </div>
       <div className="w-full text-center">
-        <Button title="View All" />
+        <Link to="/store">
+          <Button title="View All" />
+        </Link>
       </div>
     </section>
 
     {/* category section */}
-    <section className="px-40 py-20">
+    <section className="p-20">
       <div className="bg-(--bg-secondary) flex flex-col justify-center items-center rounded-3xl">
         <Header title="browse by dress style" />
         <div className="w-full pb-10 px-10 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-7">
