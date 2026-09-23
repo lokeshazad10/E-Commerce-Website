@@ -5,12 +5,12 @@ import FooterInfo from "./common/FooterInfo";
 const Footer = () => {
   return (
     <footer className="relative bg-(--bg-secondary) mt-30 flex justify-center items-center flex-col">
-      <div className="w-[80%] absolute -top-25">
+      <div className="absolute -top-32 w-[calc(100%-2rem)] sm:-top-25 sm:w-[80%]">
         <NewsLetter />
       </div>
-      <div className="mt-30">
-        <div className="flex gap-5">
-          <div className="w-[25%] px-5">
+      <div className="mt-40 w-full px-4 sm:mt-30 sm:w-[90%] sm:px-0">
+        <div className="flex flex-col gap-8 md:flex-row">
+          <div className="w-full px-2 md:w-[25%] md:px-5">
             <h1 className="font-[PrimaryFont] font-bold text-2xl py-1.5">
               shop.co
             </h1>
@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="w-[75%] grid grid-cols-4">
+          <div className="grid w-full grid-cols-2 gap-y-8 md:w-[75%] md:grid-cols-4">
             <FooterInfo
               title="company"
               listArray={["About", "Features", "Works", "Career"]}
@@ -62,14 +62,14 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="my-10 p-5 border-t-2 border-t-[#e4e4e4] flex justify-between items-center relative">
-          <p className="text-(--text-gray)">
+        <div className="relative my-10 flex flex-col items-start gap-4 border-t-2 border-t-[#e4e4e4] p-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-(--text-gray) sm:text-base">
             Shop.co © 2000-2026, All Rights Reserved.
           </p>
           <img
             src="/payments.png"
             alt=""
-            className="w-100 absolute right-5 -bottom-10"
+            className="relative right-auto bottom-auto w-64 sm:absolute sm:right-5 sm:-bottom-10 sm:w-100"
           />
         </div>
       </div>

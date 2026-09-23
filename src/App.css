@@ -8,6 +8,10 @@ html, body {
    width: 100%;
    font-family: "SecondaryFont", sans-serif;
    background: var(--bg);
+   overflow-x: hidden;
+}
+img {
+   max-width: 100%;
 }
 .slider{
    width: 100%;
