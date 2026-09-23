@@ -16,18 +16,18 @@ import { Link } from "react-router-dom";
 
 const Home = () => (
   <div className="overflow-hidden">
-    <section className="w-full px-6 bg-(--bg-secondary) flex">
-      <div className="w-1/2 pl-10 pt-20">
-        <div className="font-[PrimaryFont] font-bold text-[64px] leading-15">
+    <section className="flex w-full flex-col bg-(--bg-secondary) px-4 text-center sm:px-8 md:flex-row md:px-6 md:text-left">
+      <div className="w-full pt-12 sm:pt-16 md:w-1/2 md:pl-10 md:pt-20">
+        <div className="font-[PrimaryFont] text-4xl font-bold leading-tight sm:text-5xl lg:text-[64px] lg:leading-15">
           find clothes
         </div>
-        <div className="font-[PrimaryFont] font-bold text-[64px] leading-15">
+        <div className="font-[PrimaryFont] text-4xl font-bold leading-tight sm:text-5xl lg:text-[64px] lg:leading-15">
           that matches
         </div>
-        <div className="font-[PrimaryFont] font-bold text-[64px] leading-15">
+        <div className="font-[PrimaryFont] text-4xl font-bold leading-tight sm:text-5xl lg:text-[64px] lg:leading-15">
           your style
         </div>
-        <p className=" text-lg pt-10 text-(--text-gray)">
+        <p className="pt-6 text-base text-(--text-gray) sm:pt-10 sm:text-lg">
           Browse through our diverse range of meticulousily crafted garments,
           designed to bring out your individuality and cater to your sense of
           style.
@@ -35,15 +35,15 @@ const Home = () => (
         <Link to="/store">
           <Button title="Shop Now" />
         </Link>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-3 pb-10 sm:grid-cols-3 sm:gap-5 md:pb-0">
           <Quality title="200+" description="International Brands" />
           <Quality title="2,000+" description="High Quality Products" />
           <Quality title="30,000+" description="Happpy Customers" />
         </div>
       </div>
-      <div className="w-1/2 flex justify-center items-end relative">
+      <div className="relative flex w-full items-end justify-center md:w-1/2">
         <img
-          className="object-cover w-[40vw]"
+          className="w-full max-w-md object-cover md:w-[40vw]"
           src={HeroImage}
           alt="hero section image"
         />
@@ -54,10 +54,10 @@ const Home = () => (
     <BrandStripe />
 
     {/* new arrivals section  */}
-    <section className="w-screen py-20 border-t-2 border-t-[#e4e4e4]">
-      <Header title="New Arrivals" />
+    <section className="w-full border-t-2 border-t-[#e4e4e4] py-12 sm:py-20">
+      <Header title="New Arrivals" text="text-3xl sm:text-4xl" />
       {/* product grid */}
-      <div className="w-full grid grid-cols-4 py-15 px-20">
+      <div className="grid w-full grid-cols-2 gap-x-3 gap-y-8 px-4 py-10 sm:gap-5 sm:px-8 sm:py-15 lg:grid-cols-4 lg:px-20">
         {ProductsData.map((item) => {
           return item.tag === "New" ? <Product key={item.id} product_info={item} /> : null;
         })}
@@ -68,10 +68,10 @@ const Home = () => (
     </section>
 
     {/* top selling section  */}
-    <section className="w-screen border-t-2 border-t-[#e4e4e4]">
-      <Header title="top selling" />
+    <section className="w-full border-t-2 border-t-[#e4e4e4]">
+      <Header title="top selling" text="text-3xl sm:text-4xl" />
       {/* product grid */}
-      <div className="w-full grid grid-cols-4 py-15 px-20">
+      <div className="grid w-full grid-cols-2 gap-x-3 gap-y-8 px-4 py-10 sm:gap-5 sm:px-8 sm:py-15 lg:grid-cols-4 lg:px-20">
         {ProductsData.map((item) => {
           return item.tag === "Top Selling" ? <Product key={item.id} product_info={item} /> : null;
         })}
@@ -84,10 +84,10 @@ const Home = () => (
     </section>
 
     {/* category section */}
-    <section className="p-20">
-      <div className="bg-(--bg-secondary) flex flex-col justify-center items-center rounded-3xl">
-        <Header title="browse by dress style" />
-        <div className="w-full pb-10 px-10 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-7">
+    <section className="px-4 py-10 sm:px-8 sm:py-16 lg:p-20">
+      <div className="flex flex-col items-center justify-center rounded-3xl bg-(--bg-secondary)">
+        <Header title="browse by dress style" text="text-3xl sm:text-4xl" />
+        <div className="grid w-full grid-cols-1 gap-5 px-5 pb-8 sm:px-10 md:grid-cols-12 md:gap-7 md:pb-10">
           <StyleCard
             title="Casual"
             imageUrl="/browse_style/casual.png"
@@ -113,9 +113,9 @@ const Home = () => (
     </section>
 
     {/* review section  */}
-    <section className="px-20 pb-20">
-      <Header title="our happy customers" width="fit-content" text="text-3xl" />
-      <div className="py-20">
+    <section className="px-4 pb-12 sm:px-8 sm:pb-20 lg:px-20">
+      <Header title="our happy customers" width="fit-content" text="text-2xl sm:text-3xl" />
+      <div className="py-10 sm:py-20">
         <Slider />
       </div>
     </section>
